@@ -5,7 +5,12 @@ from app.routes.products import router as product_routers
 app = FastAPI()
 
 
-# app.include_router(user_routers)
+app.include_router(user_routers)
 app.include_router(product_routers)
+
+
+@app.get("/")
+async def root():
+  return {"data" : "Root"}
 
 

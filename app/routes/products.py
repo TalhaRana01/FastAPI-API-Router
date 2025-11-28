@@ -1,6 +1,6 @@
 from fastapi import APIRouter
 
-router = APIRouter()
+router = APIRouter(tags=["products"])
 
 @router.get("/products")
 async def get_products():
